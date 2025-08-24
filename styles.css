@@ -1,12 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
     width: 100vw;
     height: 100vh;
     font-family: 'Courier New', Courier, monospace;
-    font-smooth: never;
-    -webkit-font-smoothing : none;
-    color: white;
+	--white: #e7e6e6;
 }
 
 div{
@@ -17,13 +23,17 @@ div{
 .intro{
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     background-color: transparent;
-    z-index: 999999;
     text-align: center;
     font-size: 30px;
+    text-decoration: none;
+    max-width: 1000px;
+    max-height: 300px;
+    z-index: 2;
 }
 
 .slime{
@@ -32,8 +42,8 @@ div{
     block-size: 100px;
     box-sizing: border-box;
     padding: 0;
-    top: 55%;
-    left: 45%;
+    top: 60%;
+    left: 40%;
     background: url("assets/slimeidlecropped.gif");
     background-repeat:no-repeat;
 }
@@ -42,6 +52,67 @@ div{
     background: url("assets/hurtslimecropped.gif");
     background-repeat:no-repeat;
 }
+
+.ghost {
+    bottom: 50%;
+	width: 8vmin;
+	height: 12vmin;
+	background-color: var(--white);
+	background-image: radial-gradient(ellipse at 35% 40%, #000 8%, transparent 0%),
+		radial-gradient(ellipse at 65% 40%, #000 8%, transparent 0%),
+		radial-gradient(ellipse at 50% 60%, #000 8%, transparent 0%);
+	border-radius: 100% / 70% 70% 0% 0%;
+	transform: translateX(100em) rotateZ(-90deg);
+	position: relative;
+	opacity: 0.9;
+	mix-blend-mode: exclusion;
+	animation: ghostMove 4s ease-out;
+}
+@keyframes ghostMove {
+	0% {
+		transform: translateX(30em) rotateZ(-90deg);
+	}
+	100% {
+		transform: translateX(-35em) rotateZ(-90deg);
+	}
+}
+.ghost div {
+	position: absolute;
+	width: 20%;
+	background-color: var(--white);
+}
+.ghost div:nth-of-type(1) {
+	height: 7vmin;
+	left: 0;
+	bottom: -5vmin;
+	border-radius: 100% / 0% 0% 50% 50%;
+}
+.ghost div:nth-of-type(2),
+.ghost div:nth-of-type(4) {
+	height: 4vmin;
+	left: 20%;
+	bottom: -3vmin;
+	border-radius: 100% / 50% 50% 0% 0%;
+	background-color: transparent;
+}
+.ghost div:nth-of-type(3) {
+	height: 4vmin;
+	left: 40%;
+	bottom: -3.95vmin;
+	border-radius: 100% / 0% 0% 60% 60%;
+	background-color: var(--white);
+}
+.ghost div:nth-of-type(4) {
+	left: 60%;
+}
+.ghost div:nth-of-type(5) {
+	height: 3vmin;
+	left: 80%;
+	bottom: -2.9vmin;
+	border-radius: 100% / 0% 0% 70% 70%;
+	background-color: var(--white);
+}
+
 
 
 

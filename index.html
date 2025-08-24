@@ -22,11 +22,21 @@
 
 <body>
     <audio id="squish" src="assets/slimequish.mp3"></audio>
+    <div class="container">
     <div class="intro">
         <h1 style="color:black">Hello! Click on the slime to enter.</h1>
         <a href="javascript:delay('main.html')" onclick="document.getElementById('squish').play()">
         <div class="slime"></div></a>
+        <div class="ghost">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
     </div>
+    </div>
+    </body>
 
 <script>
     function delay (URL) {
