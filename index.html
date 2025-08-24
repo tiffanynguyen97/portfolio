@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0">
+  <title>.start</title>
+  <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+            font-smooth: never;
+            -webkit-font-smoothing : none;
+            color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="squish" src="assets/slimequish.mp3"></audio>
+    <div class="intro">
+        <h1 style="color:black">Hello! Click on the slime to enter.</h1>
+        <a href="javascript:delay('main.html')" onclick="document.getElementById('squish').play()">
+        <div class="slime"></div></a>
+    </div>
+
+<script>
+    function delay (URL) {
+        setTimeout( function() { window.location = URL }, 300 );
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>
