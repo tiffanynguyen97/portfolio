@@ -2,7 +2,7 @@
 const e = React.createElement;
 
 function HelloReact() {
-  return e('div', { style: { color: 'blue', fontWeight: 'bold' } }, 'Hello from React!');
+  return e('div', { style: { color: 'blue', fontWeight: 'bold' } }, '');
 }
 
 ReactDOM.render(e(HelloReact), document.getElementById('react'));
